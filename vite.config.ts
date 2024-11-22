@@ -7,7 +7,7 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // base: '/react-playground/',
+  base: '/react-playground/',
   plugins: [
     react(),
     createSvgIconsPlugin({
