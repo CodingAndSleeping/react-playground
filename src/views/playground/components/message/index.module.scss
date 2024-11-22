@@ -1,0 +1,48 @@
+.message {
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+
+  background-color: var(--background-color);
+  border-radius: 5px;
+
+  border: 2px solid var(--color);
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  pre {
+    color: var(--color);
+    max-height: 10rem;
+    min-height: 2rem;
+    white-space: break-spaces;
+    overflow: auto;
+  }
+
+  .close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    height: 20px;
+    width: 20px;
+    color: #fff;
+    background-color: var(--color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.error {
+  --color: #f68e90;
+  --background-color: #fceef0;
+}
+
+.warn {
+  --color: #e5a23e;
+  --background-color: #fdf6ec;
+}

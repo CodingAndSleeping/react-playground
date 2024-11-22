@@ -1,0 +1,12 @@
+.tab {
+  &::-webkit-scrollbar {
+    height: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #0ad8ff;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+}
