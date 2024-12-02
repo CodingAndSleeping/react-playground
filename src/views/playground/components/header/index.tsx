@@ -2,8 +2,9 @@ import reactLogo from '@/assets/svg/react.svg'
 import { useContext } from 'react'
 import { PlaygroundContext } from '../../playgroundContext'
 import SvgIcon from '@/components/svgIcon'
+import { downloadFiles } from '../../utils'
 function Header() {
-  const { theme, setTheme } = useContext(PlaygroundContext)
+  const { files, theme, setTheme } = useContext(PlaygroundContext)
 
   const handleChangeTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
@@ -16,6 +17,10 @@ function Header() {
     } catch (error) {
       console.error('复制失败:', error)
     }
+  }
+
+  const handleDownloadFiles = () => {
+    downloadFiles(files)
   }
 
   const viewOnGithub = () => {
@@ -52,6 +57,14 @@ function Header() {
           onClick={copyLink}
         >
           <SvgIcon name='share' size='1.5rem'></SvgIcon>
+        </div>
+
+        <div
+          className='mr-[1rem] cursor-pointer'
+          title='Download project files'
+          onClick={handleDownloadFiles}
+        >
+          <SvgIcon name='download' size='1.5rem'></SvgIcon>
         </div>
 
         <div
